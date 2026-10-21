@@ -1,69 +1,37 @@
 
-/* =========================
-   RESET CSS
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    color: #111;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-input,
-button {
-    font-family: inherit;
-}
-
-/* =========================
-   1. BANNER
-========================= */
-
+/* Banner */
 .banner {
-    width: 100%;
     height: 387px;
-
     position: relative;
-
-    background-image: url("./image/head-background.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("./image/head-background.jpg") center center / cover no-repeat;
 }
 
-/* Logo và hotline */
-
+/* Đường kẻ ngang dưới logo và hotline */
 .top-container {
     width: 465px;
-    height: 100px;
+    height: 95px;
     margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
 }
 
+/* Logo */
 .logo {
     width: 150px;
-    flex-shrink: 0;
+    height: 95px;
 }
 
 .logo img {
     width: 150px;
-    height: 100px;
+    height: 95px;
     object-fit: contain;
 }
 
+/* Hotline */
 .hotline {
     width: 225px;
     height: 38px;
@@ -75,14 +43,13 @@ button {
 
     background-color: #399b2d;
     color: white;
-
     font-size: 14px;
     font-weight: bold;
-    text-transform: none;
-    white-space: nowrap;
 }
 
-/* Form đăng ký trên banner */
+
+
+/* ===== FORM ĐĂNG KÝ TRÊN BANNER ===== */
 
 .register-box {
     width: 185px;
@@ -93,83 +60,174 @@ button {
     left: calc(50% - 232px);
 
     padding: 16px 12px 12px;
+    box-sizing: border-box;
 
     background-color: #698b38;
     border: 4px solid #d9e49a;
-
-    color: white;
+    color: #fff;
 }
 
+/* Tiêu đề */
 .register-box h2 {
+    font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
     line-height: 1.05;
     text-align: center;
     text-transform: none;
 
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 }
 
+/* Nội dung ưu đãi */
 .register-box p {
+    font-family: Arial, sans-serif;
     font-size: 8px;
     font-style: italic;
+    font-weight: normal;
     line-height: 1.5;
     text-align: center;
 
-    margin-bottom: 8px;
+    margin: 0 0 8px;
 }
 
-/* Form nằm trong register-box */
-
+/* Form */
 .register-box form {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 4px;
+
+    width: 100%;
+    margin: 0;
 }
 
+/* Các ô nhập liệu */
 .register-box input {
+    display: block;
+
     width: 100%;
     height: 16px;
-
     padding: 2px 3px;
 
+    box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #819b56;
+    border-radius: 0;
     outline: none;
 
-    background: transparent;
-    color: white;
+    background-color: transparent;
+    color: #fff;
 
+    font-family: Arial, sans-serif;
     font-size: 8px;
 }
 
+/* Chữ gợi ý trong ô */
 .register-box input::placeholder {
-    color: white;
+    color: #fff;
     opacity: 1;
 }
 
+/* Nút đăng ký */
 .register-box button {
+    display: block;
+
     width: 85px;
     height: 28px;
+    padding: 0;
 
     margin: 2px auto 0;
 
     border: none;
-    background-color: #d5df00;
-    color: white;
+    border-radius: 0;
 
+    background-color: #d5df00;
+    color: #fff;
+
+    font-family: Arial, sans-serif;
     font-size: 8px;
+    font-weight: normal;
+    text-align: center;
+
     cursor: pointer;
 }
 
-/* =========================
-   2. GIỚI THIỆU DỰ ÁN
-========================= */
+/* Hiệu ứng khi rê chuột */
+.register-box button:hover {
+    background-color: #c5d000;
+}
 
-.introduction {
+/* Không làm thay đổi màu nền khi nhập liệu */
+.register-box input:focus {
+    border-bottom-color: #d5df00;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
     width: 100%;
+    padding: 16px 0 18px;
+    box-sizing: border-box;
+    background: #dce38a;
+    border-top: 1px solid white;
+}
+
+.footer-container {
+    width: 480px;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+.footer-container h2 {
+    color: #28682c;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.45;
+    text-align: center;
+    margin: 0 0 15px;
+}
+
+.footer-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 19px;
+    row-gap: 6px;
+    align-items: center;
+}
+
+.footer-form input {
+    display: block;
+    width: 100%;
+    height: 17px;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background: white;
+    font-size: 8px;
+}
+
+.footer-form button {
+    display: block;
+    width: 100%;
+    height: 18px;
+
+    background-color: #267600;
+    color: white;
+
+    border: none;
+    border-radius: 0;
+
+    font-size: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Giới thiệu dự án */
+.introduction {
     padding: 8px 0 12px;
-    background-color: white;
+    background: white;
 }
 
 .intro-container {
@@ -178,22 +236,17 @@ button {
 }
 
 .intro-row {
-    width: 100%;
-
     display: flex;
     align-items: flex-start;
     gap: 14px;
-
     margin-bottom: 20px;
 }
 
 .intro-row > img {
     width: 225px;
     height: 143px;
-
     flex: 0 0 225px;
     object-fit: cover;
-
     border: 2px dotted #65a34a;
     border-radius: 9px;
 }
@@ -203,14 +256,10 @@ button {
     min-width: 0;
 }
 
-.intro-text h2,
 .intro-text h3 {
-    color: #39812f;
     font-size: 9px;
-    font-weight: bold;
+    color: #39812f;
     line-height: 1.4;
-    text-transform: uppercase;
-
     margin: 3px 0 7px;
 }
 
@@ -220,11 +269,10 @@ button {
     text-align: justify;
 }
 
-/* Hàng thứ hai: chữ bên trái, ảnh bên phải */
-
+/* Hàng 2: chữ trái, ảnh phải */
 .second-row {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
     gap: 14px;
     margin-bottom: 0;
 }
@@ -233,60 +281,32 @@ button {
     flex: 1;
 }
 
-/* =========================
-   3. KẾT NỐI TIỆN ÍCH
-========================= */
-
+/* Tiện ích: chữ trái, ảnh phải */
 .amenities {
-    width: 100%;
-    min-height: 147px;
-
     padding: 15px 0;
-
-    background-color: #83af52;
+    background: #83af52;
     color: white;
 }
 
 .amenities-container {
     width: 466px;
     margin: 0 auto;
-
     display: flex;
     align-items: flex-start;
     gap: 15px;
 }
 
-/* HTML của bạn đặt ảnh trước chữ,
-   CSS dùng order để đưa ảnh sang bên phải */
-
-.amenities-container > img {
-    order: 2;
-
-    width: 145px;
-    height: 108px;
-
-    flex: 0 0 145px;
-    object-fit: cover;
-
-    border: 1px solid white;
-}
-
 .amenities-text {
-    order: 1;
     flex: 1;
     min-width: 0;
 }
 
 .amenities-text h2 {
     font-size: 13px;
-    font-weight: bold;
     line-height: 1.4;
-
     padding-bottom: 4px;
     margin-bottom: 7px;
-
     border-bottom: 1px solid white;
-    text-transform: uppercase;
 }
 
 .amenities-text p {
@@ -295,17 +315,19 @@ button {
     text-align: justify;
 }
 
-/* =========================
-   4. FOOTER
-========================= */
+.amenities-container > img {
+    width: 145px;
+    height: 108px;
+    flex: 0 0 145px;
+    object-fit: cover;
+    border: 1px solid white;
+    order: 2;
+}
 
+/* Footer */
 .footer {
-    width: 100%;
-    min-height: 123px;
-
-    padding: 16px 0 17px;
-
-    background-color: #dce38a;
+    padding: 16px 0 18px;
+    background: #dce38a;
     border-top: 1px solid white;
 }
 
@@ -315,85 +337,53 @@ button {
 }
 
 .footer-container h2 {
-    color: #28682c;
-
     font-size: 12px;
-    font-weight: bold;
     line-height: 1.45;
+    color: #28682c;
     text-align: center;
-
     margin-bottom: 15px;
 }
-
-/* Hai cột giống ảnh mẫu */
 
 .footer-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    column-gap: 19px;
-    row-gap: 6px;
+    gap: 6px 19px;
 }
 
 .footer-form input {
     width: 100%;
     height: 17px;
-
     padding: 2px 5px;
-
     border: 1px solid #ccc;
-    border-radius: 0;
-
-    background-color: white;
+    background: white;
     font-size: 8px;
 }
 
 .footer-form button {
-    width: 100%;
     height: 18px;
-
-    border: none;
-    border-radius: 0;
-
-    background-color: #267600;
+    border: 0;
+    background: #267600;
     color: white;
-
     font-size: 8px;
     cursor: pointer;
 }
 
-/* =========================
-   5. RESPONSIVE
-========================= */
-
+/* Điện thoại */
 @media (max-width: 600px) {
-    .banner {
-        height: 430px;
-    }
-
     .top-container {
         width: 100%;
         padding: 0 12px;
-        gap: 8px;
-    }
-
-    .logo,
-    .logo img {
-        width: 120px;
     }
 
     .hotline {
         width: auto;
-        height: 34px;
-        margin-top: 20px;
-        padding: 0 10px;
+        padding: 0 8px;
         font-size: 11px;
     }
 
     .register-box {
         left: 50%;
         transform: translateX(-50%);
-        top: 135px;
     }
 
     .intro-container,
@@ -401,27 +391,10 @@ button {
         width: 92%;
     }
 
-    .intro-row {
-        gap: 10px;
-    }
-
     .intro-row > img {
         width: 44%;
-        height: 125px;
+        height: auto;
         flex-basis: 44%;
-    }
-
-    .intro-text h2,
-    .intro-text h3 {
-        font-size: 9px;
-    }
-
-    .intro-text p {
-        font-size: 10px;
-    }
-
-    .amenities-container {
-        gap: 12px;
     }
 
     .amenities-container > img {
@@ -432,35 +405,5 @@ button {
 
     .footer-container {
         width: 92%;
-    }
-
-    .footer-container h2 {
-        font-size: 11px;
-    }
-}
-
-@media (max-width: 380px) {
-    .intro-row {
-        flex-direction: column;
-    }
-
-    .intro-row > img {
-        width: 100%;
-        height: auto;
-        flex-basis: auto;
-    }
-
-    .amenities-container {
-        flex-direction: column;
-    }
-
-    .amenities-container > img {
-        width: 100%;
-        height: auto;
-        flex-basis: auto;
-    }
-
-    .footer-form {
-        grid-template-columns: 1fr;
     }
 }
